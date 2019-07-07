@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+<style>
+.a li:hover
+{
+		background-color:black;
+	    padding:10px;
+	    color:white !important;
+	}
+
+.a 
+{
+	font-weight: bold;
+	margin-top: -40px;
+	clear: both;
+	background-color:#d9d4de;
+	height: 70px;
+}
+
+.a ul li
+	{
+		font-size: 25px;
+		float: left;
+		list-style-type: none;
+		padding: 15px;
+	}
+	
+
+.a1
+{
+	background-color: powderblue;
+	
+	height: 1000px;
+}
+.a1 form
+{
+	margin-left: 200px;
+}
+.a3
+{
+	background-color: black;
+	color: white;
+	height: 40px;
+	margin-top: -18px;
+}
+.a3 ul li
+{
+	float: right;
+	padding: 10px;
+	list-style-type: none;
+}
+.a3 li:hover
+{
+		background-color:black;
+	    padding:10px;
+	    color:white !important;
+	}
+
+.a5
+{
+	clear: both;
+	background-color:#d9d4de;
+	height: 400px; 
+	margin-top: -40px;
+}
+
+.a5 ul li
+{
+	margin-left: 200px;
+	float: left;
+	list-style-type: none;
+	padding: 10px;
+	font-size: 20px;
+}
+
+#i1
+{
+	font-weight: bold;
+}
+
+#i2 li
+{
+	margin-left: 30px;
+}
+</style>
+</head>
+<body ng-app="" style="background-color: {{color}}">
+	<div class="a3">
+		<ul>
+			<li>About us</li>
+			<li>Our locations</li>
+			<li>Help Desk</li>
+			<li>Login</li>
+			<li>Call us</li>	
+		</ul>
+	</div>
+	<div class="a">
+		<ul>
+			<li><img src="logo.png"></li>
+			<li style="margin-left: 50px"><a href="medanta.html"> Home</a></li>
+			<li>Content</li>
+			<li><a href="medantasignup.html"> Login</a></li>
+			<li>Contact us</li>
+		</ul>
+	</div>
+
+	<div class="a1">
+		
+			<form id="f1" name="myform" onsubmit="return validation()">
+			
+			<br style="clear: both;">
+			<label>First Name</label>
+			<input type="text" id="in1" name="fname" placeholder="Enter first name" onblur="fun3()">
+			
+			<br><br><br>
+			<label>Last Name</label>
+			<input type="text" id="in2" name="lname" placeholder="Enter last name" onblur="fun4()">
+			<br><br><br>
+			<label>Email id</label>
+			<input type="text" name="ename" placeholder=" Enter Email">
+			<br><br><br>
+			<label>Password</label>
+			<input type="Password" name="pass" placeholder="Enter Password">
+			<br><br><br>
+			<label>Phone no</label>
+			<input type="text" name="phno" placeholder="Enter Phone no">
+			<br><br><br>
+			<br>
+			<label>City</label>
+			<select>
+					<option>Bangalore</option>
+					<option>Delhi</option>
+					<option>Pune</option>
+					<option>Gurugram</option>
+			</select>
+			<br>
+			<br>
+			<label>Gender</label>
+			<input type="checkbox">male
+			<input type="checkbox">female
+			<br>
+			<br>
+			
+				<input type="submit" value="Submit">
+				<button>Reset</button>
+	
+		</form>
+		<script>
+
+			function funcky()
+			{
+				a=document.getElementById("f2").value;
+				document.getElementById("feel").style.backgroundColor=a;
+			}
+			function fun3()
+			{
+				var a=document.getElementById("in1");
+				a.value=a.value.toUpperCase();	
+			}
+			function fun4()
+			{
+				var a=document.getElementById("in2");
+				a.value=a.value.toLowerCase();
+			}
+
+			var k = document.getElementById("demo1");
+			x=0
+			function change()
+			{
+				x=x+1
+				if (x===1)
+				{
+					document.getElementById("demo1").src="linkedin.png";
+
+				}
+				else
+				{
+					document.getElementById("demo1").src = "logo.png";
+					x=0;
+				}
+			}
+			</script>
+		<div  id="feel"style="margin-top: -400px;margin-left: 500px; height: 400px" ng-app="">
+			<button onclick="document.getElementById('demo').innerHTML=Date()">
+				Date and Time
+				</button><p id="demo"></p>
+				<img src="logo.png" id="demo1" onclick="change()" height="40px">
+				<br><br><br>
+				<select id="f2" onchange="funcky()">
+					<option value="yellow"> Yellow</option>
+					<option value="lightgreen"> Green</option>
+					<option value="orange"> Orange</option>
+				</select>
+				<img src="twitter.png" height="40px" id="in6" onmouseover="bigImg(this)" onmouseout="smallImg(this)">
+				<label>Name:</label>
+				<input type="text" ng-model="name"
+				placeholder = "Enter a name here"><br><br><br>
+				<label>Place:</label>
+				<input type="text" ng-model="city" placeholder="Enter a name here">
+				<hr>
+				<h3>Hello{{name}}</h3>
+				<h3>Welcome to :{{city}}</h3>
+				<p>Hekko <span ng-bind="name"></span></p>
+				<h2>Number:<input type="text" ng-model="num1"></h2>
+				<h2>Number:<input type="text" ng-model="num2"></h2>
+				<p>Multiplication:{{num1*num2}}</p>
+				<h2>Number:<input type="text" ng-model="num3"></h2>
+				<h2>Number:<input type="text" ng-model="num4"></h2>
+				<p>Division:{{num3/num4}}</p>
+				<h2>Number:<input type="Number" ng-model="num5"></h2>
+				<h2>Number:<input type="number" ng-model="num6"></h2>
+				<p>Addition:{{num5+num6}}</p>
+				<h2>Number:<input type="number" ng-model="num7"></h2>
+				<h2>Number:<input type="number" ng-model="num8"></h2>
+				<p>subtraction:{{num7-num8}}</p>
+				<input ng-model="color">
+
+				<input style="background-color: {{color1}}" ng-model="color1">
+		</div>
+		<div>
+			
+			
+		</div>
+	</div>
+	
+	<div class="a5">
+		<ul id=i1>
+			<li>About us</li>
+			<li>Our Story</li>
+			<li>Specialists</li>
+		</ul>
+		<br>
+		<br>
+		<ul id="i2">
+			<li><b>Locations</b></li>
+			<li>Gurugram</li>
+			<li>Indore</li>
+			<li>Ranchi</li>
+			<li>DLF Cybercity</li>
+			<li>South Delhi</li>
+			<li>Delhi Airport</li>
+			<li>Sri Ganganagar</li>
+			<br>
+			<br>
+
+			<br style="clear: both;">
+			<hr style="margin-left:-40px;">
+			<h1>Stay Connected</h1>
+
+			<li><img src="fb.png" height="40px"></li>
+			<li><img src="twitter.png" height="40px"></li>
+			<li><img src="whatsapp.jpg" height="40px"></li>
+			<br>
+			<br>
+			<br style="clear: both;">
+			<li style="margin-left:40px"><img src="google.png" height="40px"></li>
+			<li><img src="linkedin.png" height="40px"></li>
+		</ul>
+	</div>	
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> 
+	function bigImg(x)
+	{
+		x.style.height="40px";
+		x.style.width="40px";
+	}
+
+	function smallImg(x)
+	{
+		x.style.height="20px";
+		x.style.width="20px";
+	}
+
+	function validation()
+	{
+		var name=document.forms["myform"]["fname"].value;
+		if(name=="")
+		{
+			alert("Please Enter the Name");
+			name.focus();
+			return false;
+		}
+
+		var name=document.forms["myform"]["lname"].value;
+		if(name=="")
+		{
+			alert("Enter last name");
+			name.focus();
+			return false;
+		}
+		var name=document.forms["myform"]["ename"].value;
+		if(name=="")
+		{
+			alert("Enter Email");
+			name.focus();
+			return false;
+		}
+		var name=document.forms["myform"]["pass"].value;
+		{
+			if (name=="")	
+			alert("Enter password");
+			name.focus();
+			return false;
+		}
+		document.write("Document submitted successfully");
+		return (true);
+	}
+</script>
+</html>

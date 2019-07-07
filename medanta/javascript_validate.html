@@ -1,0 +1,32 @@
+<script>
+		function validation()
+		{
+			var name=document.forms["myform"]["fname"].value;
+			if(name=="")
+			{
+				window.alert("Please bharo");
+							}
+		}
+	</script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		validation
+	</title>
+	
+
+</head>
+<body>
+
+<center>
+	<form id="i1" name="myform" onsubmit="return validation()">
+	<label>First Name
+		<input type="text" name="fname" >
+	</label>
+	<input type="submit" value="button">
+	</form>
+</center>
+
+</body>
+</html>

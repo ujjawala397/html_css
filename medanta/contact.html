@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+</head>
+<script>
+	function validate()
+	{
+		if(document.div1.name.value=="")
+		{
+			alert("enter valid name");
+		}
+	}
+</script>
+<style>
+	
+#i1
+{
+
+	margin-top: -15px;
+	background-color: black;
+	color: white;
+	height: 30px;
+}
+#i1 ul li
+{
+	list-style-type: none;
+	float: left;
+	padding: 10px;
+}
+#i2
+{
+	font-size: 20px;
+	margin-top: -17px;
+	background-color: #d9d4de;
+	height: 50px;
+}
+#i2 ul li
+{
+	padding: 10px;
+	float: left;
+	list-style-type: none;
+}
+.a4
+{
+	margin-top: -20px;
+	background-color: #d9d4de;
+	height: 500px;
+}
+.a4 ul li
+{
+	list-style-type: none;
+	float: left;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 20px;
+}
+#i3
+{
+	background-color: powderblue;
+	height: 480px; 
+}
+#i4
+{	
+	border-top: 5px;
+	height: 480px;
+	margin:0px 400px 0px 100px;
+	background-color: lightgreen;
+
+}
+</style>
+<body>
+	<div id="i1">
+		<ul>
+			<li style="margin-left: 800px">About us</li>
+			<li> Our Locations</li>
+			<li>Help Desk</li>
+			<li>Login</li>
+			<li>Call us</li>
+		</ul>
+	</div>
+	<div id="i2">
+		<ul>
+			<li><img src=" logo.png" height="35px;" style="margin-top: -10px"></li>
+			<li>Home</li>
+			<li>Content</li>
+			<li>Contact us</li>
+			<li>Login</li>
+		</ul>
+	 </div>
+	 <div id="i3">
+	 	<div id="i4" style="clear: both" name="div1">
+	 		Enter your first name:<input type="text" name="fname">
+	 		<br>
+	 		<br>
+	 		<br>
+	 		Enter your last name:<input type="text" name="lname">
+	 		<br>
+	 		<br>
+	 		<br>
+	 		Enter your ph no.:<input type="number" name="phno"><br>
+	 		<br>
+	 		<br>
+	 		<button onclick="validae()">submit</button>
+
+	 	</div>
+	 </div>
+
+	<div class="a4">
+		<ul>
+			<li style="margin-left: 400px; clear: both;">About us</li>
+			<li>Our Story</li>
+			<li>Specialists</li>
+			<br>
+			<br>
+			<br>
+			<li style="font-weight: bold; clear: both;font-size: 30px;margin-top:-8px ">Locations:</li>
+			<li>Gurugram</li>
+			<li>Indore</li>
+			<li>Ranchi</li>
+			<li>DLF Cybercity</li>
+			<li>South Delhi</li>
+			<li>Delhi Airport</li>
+			<li>Sri Ganganagar</li>
+			<br>
+			<br style="clear: both; ">
+			<hr style="margin-left:-40px ">
+			<h1>Stay Connected</h1>
+
+			<li><img src="fb.png" height="40px"></li>
+			<li><img src="twitter.png" height="40px"></li>
+			<li><img src="whatsapp.jpg" height="40px"></li>
+			<br>
+			<br>
+			<br style="clear: both;">
+			<li style="margin-left:40px"><img src="google.png" height="40px"></li>
+			<li><img src="linkedin.png" height="40px"></li>
+			
+	</ul>
+	</div>
+</body>
+</html>
